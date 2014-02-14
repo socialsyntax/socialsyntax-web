@@ -19,7 +19,6 @@
 **** Code access
      : git clone ssh://52f20a655973cae1970002f3@socialsyntax-wonderseecker.rhcloud.com/~/git/socialsyntax.git/
      : cd socialsyntax/
-**** TODO repait python slots
 
 *** Microsoft BizSpark
     https://news.ycombinator.com/item?id=7164845
@@ -46,6 +45,10 @@
     : pip install django==1.5.5
     : pip install django-tastypie
 
+**** CMS 
+     http://wagtail.io/#features
+     + Zipper layout
+
 ** Data storage
    - Amazon RDS Single-AZ Micro DB Instances running MySQL
    - Amazon SimpleDB Machine
@@ -65,18 +68,17 @@
 *** RIAK !!!
     http://django-tastypie.readthedocs.org/en/latest/non_orm_data_sources.html
 
-**** TODO Install Riak for MessageResource
-     http://django-tastypie.readthedocs.org/en/latest/non_orm_data_sources.html
-
-** GITHUB socialsyntax organization
-   https://github.com/orgs/socialsyntax/dashboard
-   - usefull to organize collaboration
-
 ** Monitoring
    - use Munin building on top of Python-Munin
    - Pingdom for external monitoring
    - Python error reporting, we use Sentry, an awesome open-source Django
 
+** GITHUB socialsyntax organization
+   https://github.com/orgs/socialsyntax/dashboard
+   - usefull to organize collaboration
+
+** TESTING and CI
+   
 * C9 codding and deployment platform
   https://c9.io/ibnhatab/socialsyntax
 ** Here are some steps to get you started:
