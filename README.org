@@ -48,7 +48,24 @@
 **** CMS 
      http://wagtail.io/#features
      + Zipper layout
+**** Vagrant
+     Use https://github.com/tmatilai/vagrant-proxyconf to pass proxy
+     sudo npm install -g coffee-script
+     npm install -g less
 
+
+     git clone https://github.com/torchbox/wagtaildemo.git
+     cd wagtaildemo
+     vagrant up
+     vagrant ssh
+     (then, within the SSH session:)
+     ./manage.py createsuperuser
+     ./manage.py runserver 0.0.0.0:8000
+
+***** virtualbox
+     :  vboxmanage list vms
+     :  vboxmanage controlvm wagtaildemo_default_1392389551870_64348 poweroff
+      
 ** Data storage
    - Amazon RDS Single-AZ Micro DB Instances running MySQL
    - Amazon SimpleDB Machine
@@ -78,6 +95,9 @@
    - usefull to organize collaboration
 
 ** TESTING and CI
+   - testing django
+     : django-admin.py startproject developingable
+
    
 * C9 codding and deployment platform
   https://c9.io/ibnhatab/socialsyntax

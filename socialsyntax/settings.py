@@ -1,5 +1,6 @@
-import os;
 # Django settings for socialsyntax project.
+
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -10,15 +11,21 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+# PROJECT_ROOT = os.path.join(os.path.dirname(__file__), '..', '..')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'c9',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': os.environ['C9_USER'],
+        # 'USER': os.environ['C9_USER'],
+        'USER': 'ibnhatab',
         'PASSWORD': '',
-        'HOST': os.environ['IP'],                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        #'HOST': os.environ['IP'],
+        # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'HOST': '',
+        
+        'PORT': '8080',                      # Set to empty string for default.
     }
 }
 

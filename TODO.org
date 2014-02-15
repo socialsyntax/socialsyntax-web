@@ -7,12 +7,16 @@
    https://openshift.redhat.com/app/console/application/52f20a655973cae1970002f3-socialsyntax
 
 * Application Servers
-** TODO Add Wagtail layout
+** DONE Demo Wagtail layout
+   CLOSED: [2014-02-14 Fri 19:07]
+   
 
 * Data storage
 ** TODO Install Riak for MessageResource
    http://django-tastypie.readthedocs.org/en/latest/non_orm_data_sources.html
 
+* MISC
+** TODO emacs django mode
 
 * org-config                                                        :ARCHIVE:
 #+STARTUP: content hidestars
