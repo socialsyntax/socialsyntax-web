@@ -32,7 +32,7 @@
      Registrar URL: http://www.godaddy.com 
      Registrant Name: Kim Zavala 
 
-   - Domain Name: SOCIALSYNTAX.COM 
+   - Domain Name: SOCIALSYNTAX.ORG
      Status: FREE
 
    - Use Amazon’s Route53 for DNS
@@ -44,7 +44,6 @@
 *** Django
     : pip install django==1.5.5
     : pip install django-tastypie
-
 **** CMS 
      http://wagtail.io/#features
      + Zipper layout
@@ -91,9 +90,34 @@
            (tutorial) $ ../bin/gunicorn -w 4 myapp:app
        
      #+END_SRC
-**** TODO test
+**** TODO Chat
+     http://www.slideshare.net/adorepump/django-and-xmpp-bosh-writing-a-real-time-web-app
+**** Packaging
+     #+BEGIN_EXAMPLE
      
+     cd django-polls/
+     mv  .../polls/ .
+     e README.rst
+     e LICENSE
 
+     cat > MANIFEST.in END
+      include LICENSE
+      include README.rst
+      recursive-include polls/static *
+      recursive-include polls/templates *
+     END 
+
+     python setup.py sdist
+     tar tzvf dist/django-polls-0.1.tar.gz
+     cd ..
+     pip install --user django-polls/dist/django-polls-0.1.tar.gz
+     pip uninstall django-polls
+
+     #+END_EXAMPLE
+**** Sign-in
+     https://developers.google.com/+/web/signin/
+***** 
+      https://cloud.google.com/console/project/apps~sotialsyntax/apiui/api
 ** Data storage
    - Amazon RDS Single-AZ Micro DB Instances running MySQL
    - Amazon SimpleDB Machine
@@ -125,8 +149,13 @@
 ** TESTING and CI
    - testing django
      : django-admin.py startproject developingable
+   - How to do testing for django application
+     - a separate TestClass for each model or view
+     - a separate test method for each set of conditions you want to test
+     - test method names that describe their function
+     - Selenium to test the LiveServerTestCase in browser
 
-   
+
 * C9 codding and deployment platform
   https://c9.io/ibnhatab/socialsyntax
 ** Here are some steps to get you started:
