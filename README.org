@@ -131,9 +131,35 @@
     : mysql-ctl start
     : mysql-ctl status
     : mysql-ctl cli
+    
 
     OK
-    
+
+**** on open-shift
+     #+BEGIN_EXAMPLE
+     MySQL 5.5 database added.  Please make note of these credentials:
+
+     Root User: adminEnX5Pha
+     Root Password: f94qDdhdwDCM
+     Database Name: socialsyntax
+
+     Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+
+     You can manage your new MySQL database by also embedding phpmyadmin.
+     The phpmyadmin username and password will be the same as the MySQL credentials above.
+     #+END_EXAMPLE
+     #+BEGIN_EXAMPLE
+     MySQL 5.5 database added.  Please make note of these credentials:
+
+     Root User: admindfhRtqp
+     Root Password: Jn_JaRFDd5lW
+     Database Name: python
+
+     Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+
+     You can manage your new MySQL database by also embedding phpmyadmin.
+     The phpmyadmin username and password will be the same as the MySQL credentials above.
+     #+END_EXAMPLE
 *** RIAK !!!
     http://django-tastypie.readthedocs.org/en/latest/non_orm_data_sources.html
 
