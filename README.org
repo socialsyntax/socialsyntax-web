@@ -19,6 +19,29 @@
 **** Code access
      : git clone ssh://52f20a655973cae1970002f3@socialsyntax-wonderseecker.rhcloud.com/~/git/socialsyntax.git/
      : cd socialsyntax/
+**** Console
+     : ssh UUID@appname-namespace.example.com
+     : rhc app show -a firstphp
+
+**** Deployment
+     http://openshift.github.io/documentation/oo_user_guide.html#the-openshift-directory
+
+***** Example
+      https://github.com/openshift/django-example#admin-user-name-and-password
+      
+      Create a python application
+      : rhc app create django python-2.6
+      
+      Add this upstream repo
+
+      #+BEGIN_EXAMPLE      
+      cd django
+      git remote add upstream -m master git://github.com/openshift/django-example.git
+      git pull -s recursive -X theirs upstream master
+      #+END_EXAMPLE
+      
+      Then push the repo upstream
+      : git push
 
 *** Microsoft BizSpark
     https://news.ycombinator.com/item?id=7164845
