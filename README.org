@@ -19,6 +19,29 @@
 **** Code access
      : git clone ssh://52f20a655973cae1970002f3@socialsyntax-wonderseecker.rhcloud.com/~/git/socialsyntax.git/
      : cd socialsyntax/
+**** Console
+     : ssh UUID@appname-namespace.example.com
+     : rhc app show -a firstphp
+
+**** Deployment
+     http://openshift.github.io/documentation/oo_user_guide.html#the-openshift-directory
+
+***** Example
+      https://github.com/openshift/django-example#admin-user-name-and-password
+      
+      Create a python application
+      : rhc app create django python-2.6
+      
+      Add this upstream repo
+
+      #+BEGIN_EXAMPLE      
+      cd django
+      git remote add upstream -m master git://github.com/openshift/django-example.git
+      git pull -s recursive -X theirs upstream master
+      #+END_EXAMPLE
+      
+      Then push the repo upstream
+      : git push
 
 *** Microsoft BizSpark
     https://news.ycombinator.com/item?id=7164845
@@ -133,9 +156,35 @@
     : mysql-ctl start
     : mysql-ctl status
     : mysql-ctl cli
+    
 
     OK
-    
+
+**** on open-shift
+     #+BEGIN_EXAMPLE
+     MySQL 5.5 database added.  Please make note of these credentials:
+
+     Root User: adminEnX5Pha
+     Root Password: f94qDdhdwDCM
+     Database Name: socialsyntax
+
+     Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+
+     You can manage your new MySQL database by also embedding phpmyadmin.
+     The phpmyadmin username and password will be the same as the MySQL credentials above.
+     #+END_EXAMPLE
+     #+BEGIN_EXAMPLE
+     MySQL 5.5 database added.  Please make note of these credentials:
+
+     Root User: admindfhRtqp
+     Root Password: Jn_JaRFDd5lW
+     Database Name: python
+
+     Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+
+     You can manage your new MySQL database by also embedding phpmyadmin.
+     The phpmyadmin username and password will be the same as the MySQL credentials above.
+     #+END_EXAMPLE
 *** RIAK !!!
     http://django-tastypie.readthedocs.org/en/latest/non_orm_data_sources.html
 
