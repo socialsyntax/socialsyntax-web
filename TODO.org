@@ -12,11 +12,18 @@
    
 
 * Data storage
-** TODO Install Riak for MessageResource
+** WAITING Install Riak for MessageResource
+   - State "WAITING"    from "TODO"       [2014-03-03 Mon 11:12] \\
+     no time
    http://django-tastypie.readthedocs.org/en/latest/non_orm_data_sources.html
 
 * MISC
-** TODO emacs django mode
+** DONE emacs django mode
+   CLOSED: [2014-03-03 Mon 10:03]
+** TODO  django-social-auth
+   https://pypi.python.org/pypi/django-social-auth
+   https://cloud.google.com/console/project/apps~sotialsyntax/apiui/api
+   https://developers.google.com/api-client-library/javascript/features/authentication
 
 * org-config                                                        :ARCHIVE:
 #+STARTUP: content hidestars

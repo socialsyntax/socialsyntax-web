@@ -116,12 +116,14 @@
      #+END_EXAMPLE
 **** Sign-in
      https://developers.google.com/+/web/signin/
-***** 
+***** Sotial auth
       https://cloud.google.com/console/project/apps~sotialsyntax/apiui/api
+      django-social-auth 0.7.28
 ** Data storage
    - Amazon RDS Single-AZ Micro DB Instances running MySQL
    - Amazon SimpleDB Machine
    - RIAK for NoSQL data
+     http://django-tastypie.readthedocs.org/en/latest/non_orm_data_sources.html
    - Use Memcached for caching and connect to using pylibmc & libmemcached (Elastic Cache as alternative)
 
 *** MySql
