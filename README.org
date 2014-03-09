@@ -21,27 +21,41 @@
      : cd socialsyntax/
 **** Console
      : ssh UUID@appname-namespace.example.com
-     : rhc app show -a firstphp
+     : rhc app show -a socialsyntax
 
 **** Deployment
      http://openshift.github.io/documentation/oo_user_guide.html#the-openshift-directory
 
 ***** Example
-      https://github.com/openshift/django-example#admin-user-name-and-password
+      https://github.com/openshift/django-example
       
       Create a python application
-      : rhc app create django python-2.6
+      : rhc app create sotialsyntax python-2.6
       
       Add this upstream repo
 
       #+BEGIN_EXAMPLE      
-      cd django
-      git remote add upstream -m master git://github.com/openshift/django-example.git
+      cd socialsyntax
+      git remote add upstream -m master https://github.com/socialsyntax/socialsyntax-web.git
       git pull -s recursive -X theirs upstream master
       #+END_EXAMPLE
       
       Then push the repo upstream
       : git push
+***** CI
+      http://appsembler.com/blog/django-deployment-using-openshift/
+      : rhc app create -a ci -t python-2.7
+      + PostgreSQL 9.2 catridge
+      #+BEGIN_EXAMPLE
+      PostgreSQL 9.2 database added.  Please make note of these credentials:
+
+      Root User: adminpjujr4a
+      Root Password: qvivG_hKBfGX
+      Database Name: ci
+      
+      Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT
+      #+END_EXAMPLE
+
 
 *** Microsoft BizSpark
     https://news.ycombinator.com/item?id=7164845
